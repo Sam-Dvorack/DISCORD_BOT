@@ -10,13 +10,16 @@
   "author": "Samuel Mahlangu",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.5.1",
-    "discord.js-commando": "^0.10.0",
+    "axios": "^0.23.0",
+    "cheerio": "^1.0.0-rc.10",
+    "discord.js": "^12.5.3",
+    "discord.js-commando": "^0.12.3",
     "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "fetch": "^1.1.0",
     "google": "^2.1.0",
-    "node-fetch": "^2.6.0",
-    "nodemon": "^2.0.2",
+    "node-fetch": "^2.6.5",
+    "nodemon": "^2.0.14",
     "opusscript": "0.0.7",
     "ytdl-core": "^1.0.5"
   }
