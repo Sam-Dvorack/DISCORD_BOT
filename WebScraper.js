@@ -50,36 +50,42 @@ const getPriceFeed = async (message) => {
       }
     });
 
-    // coinArray.forEach((coin) => {
-    //   //   message.reply(coin.name + " " + coin.price);
-    // });
-    // console.log(coinArray);
     let Fields = coinArray.map((coin) => {
-      return { name: coin.name, value: coin.price, inline: true };
+      return {
+        name: coin.name,
+        value: coin.price,
+        inline: true,
+      };
     });
 
-    console.log(x);
     const exampleEmbed = new MessageEmbed()
-      .setColor("#0099ff")
+      .setColor("#744520")
+
       .setThumbnail(
         "https://www.europeanbusinessreview.com/wp-content/uploads/2021/07/cryptocurrency-696x465.jpg"
       )
       .setURL("https://coinmarketcap.com/")
       .setTitle("Cryptocurrency Prices")
       .setDescription("Today's Cryptocurrency Prices by Market Cap")
+      // .addField("\u200B", "\u200B")
       .addFields(...Fields)
       .setImage(
-        "https://www.europeanbusinessreview.com/wp-content/uploads/2021/07/cryptocurrency-696x465.jpg"
+        "https://economictimes.indiatimes.com/thumb/msid-86577021,width-1200,height-900,resizemode-4,imgsize-115720/cryptocurrency.jpg?from=mdr"
       )
+      // .setImage(
+      //   "https://www.europeanbusinessreview.com/wp-content/uploads/2021/07/cryptocurrency-696x465.jpg"
+      // )
       .setTimestamp()
       .setFooter(
         "Cryptocurrency Prices",
-        "https://www.europeanbusinessreview.com/wp-content/uploads/2021/07/cryptocurrency-696x465.jpg"
+        "https://www.pngrepo.com/png/305800/512/bitcoin.png"
       );
 
     message.reply(exampleEmbed);
     // console.log(coinArray);
-  } catch (error) {}
+  } catch (error) {
+    message.reply(error.message);
+  }
 };
 
 module.exports = { getPriceFeed };
