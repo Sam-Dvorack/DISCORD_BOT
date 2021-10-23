@@ -30,7 +30,7 @@ client.on("ready", () => {
     (channel) => channel.id === process.env.channel_id
   );
 
-  const task = cron.schedule("3 18 * * *", () => {
+  const task = cron.schedule("30 8 * * *", () => {
     getPriceFeed(MyChannel);
   });
 
