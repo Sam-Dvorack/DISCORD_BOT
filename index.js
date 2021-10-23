@@ -27,10 +27,10 @@ client.on("ready", () => {
   console.info(`Logged in as ${client.user.tag}!`);
 
   let MyChannel = client.channels.cache.find(
-    (channel) => channel.id === "849660850271944734"
+    (channel) => channel.id === process.env.channel_id
   );
 
-  const task = cron.schedule("30 8 * * *", () => {
+  const task = cron.schedule("3 18 * * *", () => {
     getPriceFeed(MyChannel);
   });
 
