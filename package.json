@@ -18,6 +18,7 @@
     "express": "^4.17.1",
     "fetch": "^1.1.0",
     "google": "^2.1.0",
+    "node-cron": "^3.0.0",
     "node-fetch": "^2.6.5",
     "nodemon": "^2.0.14",
     "opusscript": "0.0.7",

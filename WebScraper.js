@@ -81,10 +81,10 @@ const getPriceFeed = async (message) => {
         "https://www.pngrepo.com/png/305800/512/bitcoin.png"
       );
 
-    message.reply(exampleEmbed);
+    message.send(exampleEmbed);
     // console.log(coinArray);
   } catch (error) {
-    message.reply(error.message);
+    message.send(error.message);
   }
 };
 
